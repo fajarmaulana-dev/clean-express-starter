@@ -1,0 +1,88 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "coverage": "nyc npm test",
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "dev": "nodemon app.ts"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "test/**"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "all": true,
+    "sourceMap": true,
+    "instrument": true,
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fajarmaulana-dev/clean-express-starter.git"
+  },
+  "keywords": [
+    "backend",
+    "node.js",
+    "express.js"
+  ],
+  "author": "fajarmaulana-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fajarmaulana-dev/clean-express-starter/issues"
+  },
+  "homepage": "https://github.com/fajarmaulana-dev/clean-express-starter#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0",
+    "mongoose-unique-validator": "^5.0.0",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^3.3.4",
+    "node-jose": "^2.2.0",
+    "nodemailer": "^6.9.13"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/chai": "^4.3.16",
+    "@types/chai-http": "^4.2.0",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mocha": "^10.0.6",
+    "@types/mongoose-unique-validator": "^1.0.9",
+    "@types/multer": "^1.4.11",
+    "@types/node-jose": "^1.1.13",
+    "@types/nodemailer": "^6.4.15",
+    "@types/sinon": "^17.0.3",
+    "chai": "^5.1.1",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.4.0",
+    "nodemon": "^3.1.0",
+    "nyc": "^15.1.0",
+    "sinon": "^18.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
